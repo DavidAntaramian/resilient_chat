@@ -1,0 +1,50 @@
+{
+  "mappings" : {
+    "sms" : {
+      "properties" : {
+        "contact" : {
+          "properties" : {
+            "email" : {
+              "type" : "string"
+            },
+            "firstname" : {
+              "type" : "string"
+            },
+            "lastname" : {
+              "type" : "string"
+            },
+            "name" : {
+              "type" : "string"
+            },
+            "phone" : {
+              "type" : "string"
+            }
+          }
+        },
+        "sent" : {
+          "type" : "date",
+          "format" : "dateOptionalTime||yyyy-MM-dd'T'HH:mm:ss.SSSZ||yyyy-MM-dd"
+        },
+        "is_from_me" : {
+          "type" : "boolean"
+        },
+        "text" : {
+          "type" : "string",
+          "analyzer" : "english"
+        },
+        "attachments" : {
+          "properties" : {
+            "data" : {
+              "type" : "string",
+              "index" : "no"
+            },
+            "mime_type" : {
+              "type" : "string"
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
